@@ -31,7 +31,7 @@ user = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scis
 
 computer = random.randint(0,2)
 
-if user >= 3 or user <= 0:
+if user >= 3 or user < 0:
    print("You chose an invalid number, you lose!")
 else:
   print(rps[user])
