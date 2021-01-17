@@ -26,8 +26,8 @@ def calculate_score(cards):
     if sum_cards == 21 and len(cards) == 2:
         return 0
         
-    if cards[0] == 11 and sum_cards > 21:
-        sum_cards[0].remove(11)
+    if 11 in cards and sum_cards > 21:
+        sum_cards.remove(11)
         sum_cards.append(1)
         return sum_cards
     else:
