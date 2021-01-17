@@ -86,6 +86,6 @@ def black_jack():
     print(f" Computer's final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
 
-while input(f"Would you like to play Blackjack? 'y' or 'no': ") == "y":
+while input(f"Would you like to play Blackjack? 'y' or 'n': ") == "y":
     clear()
     black_jack()
