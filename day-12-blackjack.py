@@ -29,9 +29,7 @@ def calculate_score(cards):
     if 11 in cards and sum(cards) > 21:
         cards.remove(11)
         cards.append(1)
-        return sum_cards
-    else:
-        return sum(cards)
+    return sum_cards
 
 def compare(user_score,computer_score):
     if user_score == computer_score:
