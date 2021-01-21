@@ -1,0 +1,49 @@
+import random
+from art import *
+from game_data import data
+from replit import clear
+
+
+####imports from above not included at the moment ####
+
+user_score = 0
+
+def compare_ab(a, b):
+    global user_score
+    clear()
+    if user_input == "A":
+        if a['follower_count'] > b['follower_count']:
+            user_score += 1
+            print(f"You're right! Current score: {user_score}")
+        elif a['follower_count'] < b['follower_count']:
+            game_over = True 
+            print(f"Sorry, that's wrong.  Final score: {user_score}")
+    if user_input == "B":
+        if b['follower_count'] > a['follower_count']:
+            user_score += 1
+            print(f"You're right! Current score: {user_score}")
+        elif b['follower_count'] < a['follower_count']:
+            game_over = True
+            print(f"Sorry, that's wrong.  Final score: {user_score}")          
+
+random_c = random.choice(data) #not used currently, might need
+
+g)ame_over = False
+
+random_b = random.choice(data)
+
+while not game_over:
+    random_a = random_b
+    random_b = random.choice(data)
+    
+    print(logo)
+    print(f"Compare A:  {random_a['name']}, a {random_a['description']}, from {random_a['country']}.")
+    print(vs) 
+
+    print(f"\nAgainst B:  {random_b['name']}, a {random_b['description']}, from {random_b['country']}.")
+
+    user_input = input(f"\nWho has more followers? Type 'A'or 'B': ")   
+
+    print(logo)
+
+    compare_ab(random_a, random_b
