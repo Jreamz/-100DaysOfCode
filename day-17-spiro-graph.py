@@ -17,15 +17,13 @@ def random_color():
     return r, g, b
 
 
-def draw_circle():
-    tim.color(random_color())
-    current_heading = tim.heading()
-    current_heading += (1)
-    tim.setheading(current_heading)
-    tim.circle(100)
+def draw_circle(gap):
+    for n in range(int(360 / gap)):
+        tim.color(random_color())
+        tim.setheading(tim.heading() + gap)
+        tim.circle(100)
 
 
-for n in range(0, 361):
-    draw_circle()
+draw_circle(10)
 
 screen.exitonclick()
