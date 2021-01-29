@@ -26,10 +26,10 @@ def draw(x):
         tim.forward(50)
 
 
-tim.penup()
-
-for n in range(0, 451, 50):
-    tim.goto(-200, n)
+for n in range(-100, 351, 50):
+    tim.penup()
+    tim.setx(-200)
+    tim.sety(n)
     draw(10)
 
 
